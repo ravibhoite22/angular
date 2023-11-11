@@ -1,0 +1,7 @@
+<p>parent-one works!</p>
+<button (click)="showChild()">Show Child</button>
+<input type="text" [(ngModel)]="userName" />
+<span>{{ userName }}</span>
+<app-child-one [userName]="userName" *ngIf="!isShow"> 
+<p #fromParent>This is from Parent one component</p>
+</app-child-one>
