@@ -1,0 +1,14 @@
+<p>Html sanitizer</p>
+
+<input type="text" #searchInput />
+<button (click)="search(searchInput)">
+  Search
+</button>
+<h1>Your search input is <h2 [innerHTML]="searchKey"></h2></h1>
+
+<p>Url sanitizer</p>
+<button (click)="loadUrl()">
+  Load
+</button>
+
+<p><iframe [src]="baseUrl"></iframe></p>
