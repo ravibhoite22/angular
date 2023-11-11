@@ -1,0 +1,22 @@
+<p>App is parent component</p>
+
+<!--ng-template-->
+<div *ngIf="isShowDiv; else showNgTemplate">This is div content</div>
+<ng-template #showNgTemplate> This is ng-template content </ng-template>
+<p></p>
+
+<!--ng-container-->
+<div *ngIf="isShowDiv">
+  <ng-container *ngFor="let item of arr"> {{item}}</ng-container>
+</div>
+
+<!--ng-content used in child to show content passed from parent-->
+<app-child-one>
+  <div>This is from parent component displayed using ng-content in child</div>
+  <div>This is from parent to child one component </div>
+</app-child-one>
+
+<app-child-two>
+  <div>This is from parent component</div>
+  <div PtoC2>This is from parent to child two component displayed using ng-content with select in child</div>
+</app-child-two>
