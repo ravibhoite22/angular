@@ -1,0 +1,39 @@
+<h1>Pipes in Angular</h1>
+<div>
+  <h3>Currency Pipe</h3>
+  <div>Amount: {{ amount | currency }}</div>
+  <div>Amount: {{ amount | currency: 'INR' }}</div>
+  <div>Amount: {{ amount | currency: 'EUR' }}</div>
+  <div>Amount: {{ amount | currency: 'USD' }}</div>
+</div>
+<div>
+  <h3>Decimal/Number Pipe</h3>
+  <div>Marks: {{ mark | number }}</div>
+  <div>Marks: {{ mark | number: '3.1-2' }}</div>
+</div>
+<div>
+  <h3>Case Pipes</h3>
+  <div>Please subscribe to {{ channelName | lowercase }}</div>
+  <div>Please subscribe to {{ channelName | uppercase }}</div>
+</div>
+<div>
+  <h3>Percent Pipe</h3>
+  <div>Mark: {{ totalParentage | percent }}</div>
+</div>
+<div>
+  <h3>Date Pipe</h3>
+  <div>Today's Date is {{ today }}</div>
+  <div>Today's Date is {{ today | date }}</div>
+  <div>Today's Date is {{ today | date: 'MM-dd-yyyy' }}</div>
+</div>
+<div>
+  <h3>Async Pipe</h3>
+  <div>{{ promise | async}}</div>
+  <div>{{ observable | async}}</div>
+</div>
+
+<div>
+  <h3>Pune/Impure Pipe</h3>
+  <button (click)="update()">Update Array</button>
+  <div>{{ mobiles | impurePipe:searchKey}}</div>
+</div>
